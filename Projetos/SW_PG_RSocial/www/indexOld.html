@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>RSocial</title>
+
+    <!--Contents-->
+    <link href="Content/ratchet.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <link href="../www/Content/bs3/bootstrap.min.css" rel="stylesheet" />
+
+    <!--ANGULAR - MATERIAL DESIGN-->
+    <link href="node_modules/angular-material/angular-material.min.css" rel="stylesheet" />
+    <link href="node_modules/angular-material-icons/angular-material-icons.css" rel="stylesheet" />
+</head>
+<body ng-app="rsocial">
+    <!--HEADER-->
+    <header style="height:50px;">
+        <nav class="bar bar-standard">
+            <div class="segmented-control">
+                <a class=" control-item">
+                    <img src="../www/img/navBar/contact.png" />
+                </a>
+                <a class="control-item active">
+                    <img src="../www/img/navBar/world.png" />
+                </a>
+                <a class="control-item">
+                    <img src="../www/img/navBar/distance.png" />
+                </a>
+            </div>
+        </nav>
+    </header>
+    <!--/HEADER-->
+    <!--PROFILE-->
+    <div class="bar bar-standard bar-header-secondary" style="margin-top:10px; padding-top:0px;">
+        <ul class="table-view">
+            <li class="media">
+                <a class="">
+                    <img class="img-circle media-object pull-left" src="../www/img/lock_thumb.jpg" style="border:1px solid black; width:50px;height:50px;" />
+                    <h3 class="pull-left">Nicolas Carvalho</h3>
+                </a>
+                <a>
+                    <img src="img/home/regionPerson.jpg" class="pull-right" />
+                    <h3 class="pull-right">7.773</h3>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--/PROFILE-->
+    <!--POST-->
+    <section>
+        <div style="margin-top:120px; max-width:550px; max-height:900px; position:absolute; top:0%; left:5%; right:5%; overflow:auto; height:63%;  ">
+            <img src="../www/img/post/psg_0002.jpg" class="img-responsive" />
+
+            <p>
+                "Renda-se, como eu me rendi. Mergulhe no q vc não conhece como eu mergulhei. N se preocupe em entender, viver ultrapassa quar entendimento.""
+            </p>
+            <p>
+                "Renda-se, como eu me rendi. Mergulhe no q vc não conhece como eu mergulhei. N se preocupe em entender, viver ultrapassa quar entendimento.""
+            </p>
+            <p>
+                "Renda-se, como eu me rendi. Mergulhe no q vc não conhece como eu mergulhei. N se preocupe em entender, viver ultrapassa quar entendimento.""
+            <p>
+                "Renda-se, como eu me rendi. Mergulhe no q vc não conhece como eu mergulhei. N se preocupe em entender, viver ultrapassa quar entendimento.""
+            <p>
+                "Renda-se, como eu me rendi. Mergulhe no q vc não conhece como eu mergulhei. N se preocupe em entender, viver ultrapassa quar entendimento.""
+            </p>
+            <p>
+                "Renda-se, como eu me rendi. Mergulhe no q vc não conhece como eu mergulhei. N se preocupe em entender, viver ultrapassa quar entendimento.""
+            </p>
+            </p>
+            </p>
+        </div>
+    </section>
+    <!--/POST-->
+    <!--COMMENTS-->
+    <div class="bar bar-standard bar-footer-secondary" style="height:50px;">
+        <img src="img/home/regionPerson.jpg" class="pull-left" />
+        <span class="pull-left" ng-model="user.post.space">{{user.post.space}}</span>
+
+        <img src="img/home/timePost.jpg" class="pull-right" />
+        <span class="pull-right" ng-model="user.post.clock">{{user.post.clock}}</span>
+
+    </div>
+    <!--/COMMENTS-->
+    <!--FOOTER-->
+    <footer>
+        <nav class="bar bar-tab" style="background-color:#121314;">
+            <a class="tab-item" href="#">
+                <img src="../www/img/home/icon_category.jpg" />
+            </a>
+            <a class="tab-item active" href="app/home/home.html">
+                <img src="../www/img/home/icon_camera.jpg" />
+            </a>
+            <a class="tab-item" href="#">
+                <img src="../www/img/home/icon_notifications.jpg" />
+            </a>
+        </nav>
+    </footer>
+    <!--/FOOTER-->
+
+
+    <!--IMPORT ANGULAR-->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+
+    <!--IMPORT MATERIAL DESIGN-->
+    <script src="node_modules/angular-material/angular-material.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="node_modules/angular-material-icons/angular-material-icons.min.js"></script>
+
+    <!--IMPORT INICIALIZACAO APP-->
+    <script src="app/app.js"></script>
+
+    <!--IMPORT CONTROLLER-->
+    <script src="app/controllers/amigoController.js"></script>
+    <script src="app/controllers/homeController.js"></script>
+</body>
+</html>

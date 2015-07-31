@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>listar</title>
+    <link href="Content/ratchet.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <script>
+        function montarMapa(endereco) {
+            //alert("alais");
+
+            //Acionamos o servico de geocoding
+            var localizacao = new google.maps.Geocoder();
+
+            //Mandamos pesquisar remotamente pelo endereco
+            localizacao.geocode({ "address": endereco }, function (retorno,status){
+
+                if (status == google.maps.GeocoderStatus.OK) {
+                    //Caso retorne mais de 1 endereço fazer um looping
+                    //Dentro do arrau RETORNO
+                    var lat = retorno[0].geometry.location.k;
+                    var long = retorno[0].geometry.location.D;
+
+                    //Definimos as configurações do MAPA
+                    //3 parametros
+                    //1->Centralização (Posicionamento do MApa)
+                    //2->Zoom
+                    //3-> Tipo de MApa
+                    var configuracoes = {
+                        zoom: 17,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        center: new google.maps.LatLng(lat, long)
+
+                    };
+
+                    //Após setar as configurações do mapa
+                    //Temos que montar o mapa dentro da DIV
+                    var mapa = new google.maps.Map($("#mapa").get(0), configuracoes);
+
+
+                    //Após desenhar um mapa colocamos um marcador
+                    //Um pontinho no mapa
+                    var marcador = new google.maps.Marker({
+                        position: new google.maps.LatLng(lat,long),
+                        animation:google.maps.Animation.DROP    //BOUSE
+                    });
+
+                    marcador.setMap(mapa);
+
+                }
+            });
+        }
+    </script>
+
+
+</head>
+<body>
+    <!--header-->
+    <header class="bar bar-nav">
+        <h1 class="title">SISAMIGOS</h1>
+    </header>
+
+    <!--Sessão conteúdo-->
+    <section style="margin-top:45px;">
+        <ul class="table-view">
+            <li class="table-view-cell media" onclick="montarMapa('Rua: Franca do Imperador, 286');">
+                <a class="navigate-right">
+                    <span class="media-object pull-left icon icon-person"></span>
+                    <div class="media-body">
+                        Felipe Carvalho
+                    </div>
+                </a>
+            </li>
+            <li class="table-view-cell media" onclick="montarMapa('Rua: Agostinho de Andrade, 87');">
+                <a class="navigate-right">
+                    <span class="media-object pull-left icon icon-person"></span>
+                    <div class="media-body">
+                        Francisco Saraiva
+                    </div>
+                </a>
+            </li>
+            <li class="table-view-cell media" onclick="montarMapa('Rua: Estevão de Meira, 86');">
+                <a class="navigate-right">
+                    <span class="media-object pull-left icon icon-person"></span>
+                    <div class="media-body">
+                        Dalva Alexandre
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div id="mapa" style="width:300px;height:500px;border:1px solid;">
+
+        </div>
+    </section>
+
+    <!--tab bar-->
+    <footer>
+        <nav class="bar bar-tab">
+            <a class="tab-item active" href="Listar.html">
+                <span class="icon icon-home"></span>
+                <span class="tab-label">Listar</span>
+            </a>
+            <a class="tab-item" href="Cadastrar.html">
+                <span class="icon icon-person"></span>
+                <span class="tab-label">Cadastrar</span>
+            </a>
+        </nav>
+    </footer>
+
+</body>
+</html>

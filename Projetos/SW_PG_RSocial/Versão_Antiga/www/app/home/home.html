@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Home</title>
+    <link href="Content/ratchet.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <link href="../www/Content/bs3/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        #logo{
+            vertical-align: middle;
+        }
+
+        #block {
+            text-align: center;
+        }
+        a img{
+            margin:0;
+            border:none;
+        }
+
+        #imagem {
+            margin: 0 auto;
+            width: 100%;
+            height: 300px;
+            border:0;
+        }
+
+        #texto {
+            width:100%;
+            position: absolute;
+            margin: 100px auto;
+            vertical-align: middle;
+            font-size: 20px;
+            color: white;
+            font-family: Tahoma;
+            font-weight: 900;
+            font-size: 50px;
+        }
+        #block{
+            overflow:auto;
+        }
+        
+    </style>
+</head>
+<body ng-app="rsocial">
+    <div class="container">
+        <!--HEADER-->
+        <header style="height:63px; background-color:#222327;">
+            <nav class="bar bar-nav">
+                  <img id="logo" src="../../img/home/icon_favicon.jpg" />
+            </nav>
+        </header>
+        <!--/HEADER-->
+        <div id="block">
+            <div>
+                <a href="#">
+                    <div id="texto">FAMILY</div>
+                    <img id="imagem" src="../../img/home/banner/family.jpg" />
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <div id="texto">PEOPLE</div>
+                    <img id="imagem" src="../../img/home/banner/people.jpg" />
+                </a>
+            </div>
+            <a href="#">
+                <div id="texto">MOMENTS</div>
+                <img id="imagem" src="../../img/home/banner/moments.jpg" />
+            </a>
+            <a href="#">
+                <div id="texto">TRAVEL</div>
+                <img id="imagem" src="../../img/home/banner/travel.jpg" />
+            </a>
+            <a href="#">
+                <div id="texto">EXPLORER</div>
+                <img id="imagem" src="../../img/home/banner/explore.jpg" />
+            </a>
+            <a href="#">
+                <div id="texto">PARTY</div>
+                <img id="imagem" src="../../img/home/banner/party.jpg" />
+            </a>
+            <a href="#">
+                <div id="texto">#SELFIES</div>
+                <img id="imagem" src="../../img/home/banner/selfies.jpg" />
+            </a>
+            <a href="#">
+                <div id="texto">INSPIRATION</div>
+                <img id="imagem" src="../../img/home/banner/inspiration.jpg" />
+            </a>
+            <a href="#">
+                <div id="texto">LOVE</div>
+                <img id="imagem" src="../../img/home/banner/love.jpg" />
+            </a>
+        </div>
+    </div>
+    <!--Import ANGULARJS-->
+    <script src="Content/angular/angular.min.js"></script>
+    <script src="app/app.js"></script>
+</body>
+</html>

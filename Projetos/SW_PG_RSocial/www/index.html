@@ -1,0 +1,55 @@
+﻿<!-- A Próxima WEB a 3.0 vai ser caracterizada por dois novos recuros
+    -> Desenvolvimento SPA
+    -> Criação e Exportação de Componentes WEB
+    -> Podemos criar nossas próprias TAG <ZINA>, <XNXX>
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>App RSocial</title>
+    
+    <!--MATERIAL DESIGN-->
+    <link href="node_modules/angular-material/angular-material.min.css" rel="stylesheet" />
+    <link href="node_modules/angular-material-icons/angular-material-icons.css" rel="stylesheet" />
+
+</head>
+
+<!--Pra colocar a aplicação em angular pra rodar DENTRO da página, temos que usar a DIRETIVA NG-APP (DIRETIVA)-->
+<body ng-app="rsocial">
+    <header>
+        
+    </header>
+
+    <section>
+        <!--Após vincular a aplicação em angular dentro dessa página, temos que falar o LOCAL dela que vamos exibir as páginas filhas
+            Pra isso utilizamos a DIRETIVA NG-VIEW-->
+        <div ng-view>
+
+        </div>
+    </section>
+
+    <!--IMPORT ANGULAR-->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+
+    <!--IMPORT MATERIAL DESIGN-->
+    <script src="node_modules/angular-material/angular-material.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="node_modules/angular-material-icons/angular-material-icons.min.js"></script>
+
+    <!--IMPORT INICIALIZACAO APP-->
+    <script src="app/app.js"></script>
+
+    <!--IMPORT CONTROLLER-->
+
+    <script src="app/footer/footerController.js"></script>
+    <script src="app/header/headerController.js"></script>
+    <script src="app/home/homeController.js"></script>
+    <script src="app/leftsidebar/leftSideBarController.js"></script>
+    <script src="app/login/loginController.js"></script>
+    <script src="app/notfound/notfoundController.js"></script>
+    <script src="app/profile/profileController.js"></script>
+
+</body>
+</html>
